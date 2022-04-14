@@ -1,0 +1,105 @@
+package pack1;
+public class A 
+{
+   private int x = 50;	
+   protected int y = 100;
+    int z = 200;
+}
+package pack2;
+import pack1.A;
+public class B extends A {
+
+}
+import pack2.B;
+public class Test {
+public static void main(String[] args) 
+{
+   B b = new B();
+   System.out.println(b.x);
+
+   System.out.println(b.y);
+   System.out.println(b.z);
+  }
+}
+
+
+
+*/ output-
+ compile time error
+because in main the class A is there in which x is private and we cant access any private in another class
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+class A
+{
+    {
+        System.out.println(1);
+    }
+}
+class B extends A
+{
+    {
+        System.out.println(2);
+    }
+}
+
+class C extends B
+{
+    {
+        System.out.println(3);
+    }
+} 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        C c = new C();
+    }
+}
+
+
+
+
+*/
+output -
+123
+ in this class A is super class and c is child of A and B 
+.all the property of a is in the b class and c class
+ and all the property of b is in c class therefore the output will be 123 
+
+*/
+
+
+
+
+
+
+
+public class Baz extends Foo, Bar{
+
+int n = 50;
+int m = 10;
+
+ public static void main(String[] args)
+    {
+        Foo p = new Bar();
+
+        System.out.println(p.n);
+    }
+
+}
+
+
+*/ output - compile time error
+*/
